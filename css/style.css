@@ -677,6 +677,9 @@ footer .copy a{
         display: grid;
         grid-template-columns: repeat(3,minmax(20rem,1fr));
     }
+    .shoping-cart{
+        padding-bottom: 7rem;
+    }
 }
 
 @media(max-width: 1178px) {
@@ -751,6 +754,9 @@ footer .copy a{
         height: 6rem;
         justify-content: center;
         align-items: center;
+    }
+    .shoping-cart{
+        padding-bottom: 8rem;
     }
 }
 @media(max-width:795px){
