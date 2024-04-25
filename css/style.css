@@ -591,6 +591,7 @@ footer .copy a{
 .modal-con .close{
     position: absolute;
     right: 1rem;
+    color: gray;
 }
 .modal-con .close:hover{
     color: var(--primary);
