@@ -646,6 +646,9 @@ footer .copy a{
     font-size: 1.1rem;
     text-decoration: line-through;
 }
+.modal a.addtocart:hover{
+    background-color: #906c49;
+}
 
 /* Media Queries */
 @media(max-width:1590px){

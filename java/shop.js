@@ -57,6 +57,30 @@ purchase.forEach(function(beli){
         cart.appendChild(div)
     })
 })
+const addcart = document.querySelector('.right .addtocart')
+addcart.addEventListener('click',function(ev){
+    ev.preventDefault()
+    const div = document.createElement('div')
+    div.classList.add("cart-item")
+    const img = document.createElement('img')
+    img.src = ev.target.parentElement.parentElement.parentElement.previousElementSibling.src
+    div.appendChild(img)
+    const itemdes = document.createElement('div')
+    itemdes.classList.add('itemdes')
+    const h3 = document.createElement('h3')
+    h3.innerHTML = ev.target.parentElement.parentElement.previousElementSibling.previousElementSibling.innerHTML
+    itemdes.appendChild(h3)
+    const price = document.createElement('div')
+    price.classList.add('item-price')
+    price.innerHTML = ev.target.previousElementSibling.innerHTML
+    itemdes.appendChild(price)
+    div.appendChild(itemdes)
+    const icon = document.createElement('img')
+    icon.classList.add('remove-item')
+    icon.src = 'img/trash.png'
+    div.appendChild(icon)
+    cart.appendChild(div)
+})
 const search = document.querySelector('.search-bar')
 const searchicon = document.getElementById('search')
 const searchform = document.getElementById('search-form')
