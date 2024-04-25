@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Janji Manis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Janji<span>Manis</span>Shop.</a>
+        <div class="navshop">
+            <div class="return">
+                <a href="index.html" class="back"><i data-feather="arrow-left"></i>&ensp; Back to Home</a>
+            </div>
+            <div class="filter">
+                <a href="#" id="All" class="filterkan">Show All</a>
+                <a href="#" id='Diskon'>Discounts</a>
+                <a href="#" id='Coffee-bean'>Coffee Beans</a>
+                <a href="#" id='Snacks'>Snacks</a>
+                <a href="#" id='Tools'>Tools</a>
+            </div>
+        </div>
+        <div class="beli">
+            <a href="#" id="search"><i data-feather="search"></i></a>
+            <a href="#" id="buy"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="shopmenu"><i data-feather="menu"></i></a>
+        </div>
+        <div class="search-bar">
+            <input type="search" id="search-form" placeholder="Ketikkan Kata Kunci">
+            <label for="search-form"><i data-feather="search"></i></label>
+        </div>
+        <div class="shoping-cart">
+            <h2>Shopping Cart</h2>
+        </div>
+    </nav>
+    <section class="shop" id="shop">
+        <div class="rows">
+            <div class="produk-card coffee-bean diskon">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee bean.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Beans Arabica 100%</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 50K <span>IDR 89K</span></div>
+                </div>
+            </div>
+            <div class="produk-card coffee-bean">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee bean 3.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Beans Liberica 100%</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 75K</div>
+                </div>
+            </div>
+            <div class="produk-card coffee-bean diskon">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee bean 2.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Beans Robusta 100%</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class=""></i>
+                    </div>
+                    <div class="price">IDR 40K <span>IDR 68K</span></div>
+                </div>
+            </div>
+            <div class="produk-card snack diskon">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/fresh cookie 1.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Choclate Chip Cookies</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 40K <span>IDR 64K</span></div>
+                </div>
+            </div>
+            <div class="produk-card snack">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/fresh cookie 3.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Palm Sugar Cookies</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 50K</div>
+                </div>
+            </div>
+            <div class="produk-card snack diskon">
+                <div class="prod-icon">
+                    <a href="#" class="purchase"><i data-feather="shopping-cart"></i></a>
+                    <a href="#" class="view"><i data-feather="eye" class="view"></i></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/macaron.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Choclate Filling Macarons</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 50K <span>IDR 72K</span></div>
+                </div>
+            </div>
+            <div class="produk-card coffee-bean diskon">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee bean 1.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Beans Decaf 100%</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 58K <span>72K</span></div>
+                </div>
+            </div>
+            <div class="produk-card snack">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/macaron 1.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Rainbow Macarons</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 72K</div>
+                </div>
+            </div>
+            <div class="produk-card snack">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/fresh cookie 4.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Choco Chip Cookie Jumbo Size</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 84K</div>
+                </div>
+            </div>
+            <div class="produk-card snack">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/fresh cookie.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Original Cookies</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 48K</div>
+                </div>
+            </div>
+            <div class="produk-card coffee-bean">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee bean 4.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Beans Excelsa 100%</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 56K</div>
+                </div>
+            </div>
+            <div class="produk-card snack">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/fresh biscuit 1.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Almond Biscuits</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 38K</div>
+                </div>
+            </div>
+            <div class="produk-card snack">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/fresh biscuit.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Sandwich Biscuits</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 45K</div>
+                </div>
+            </div>
+            <div class="produk-card tool diskon">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee brew 1.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Brew Set</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 845K <span>1.125K</span></div>
+                </div>
+            </div>
+            <div class="produk-card tool">
+                <div class="prod-icon">
+                    <a href="# class="purchase""><img src="img/cart.png" alt=""></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee tool 2.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Grinder</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 350K</div>
+                </div>
+            </div>
+            <div class="produk-card tool">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee tool 4.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Naked Portafilter</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 478K</div>
+                </div>
+            </div>
+            <div class="produk-card tool">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee brew.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Brew Set</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 325K</div>
+                </div>
+            </div>
+            <div class="produk-card tool diskon">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee pot 2.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Black Small Coffee Pot</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 285K <span>330K</span></div>
+                </div>
+            </div>
+            <div class="produk-card tool">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee tool 1.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Manual Coffee Tool Set</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 385K</div>
+                </div>
+            </div>
+            <div class="produk-card tool diskon">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee tool 3.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Measuring Tool</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 158K <span>295K</span></div>
+                </div>
+            </div>
+            <div class="produk-card tool">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee tool.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Tamping Set</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 672K</div>
+                </div>
+            </div>
+            <div class="produk-card tool">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee brew 2.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Brew</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 338K</div>
+                </div>
+            </div>
+            <div class="produk-card tool diskon">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee tool 5.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Tamping Set</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 432K <span>568K</span></div>
+                </div>
+            </div>
+            <div class="produk-card tool diskon">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/Expreso machine.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Expreso Machine</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 1.875K <span>2.245K</span>K</div>
+                </div>
+            </div>
+            <div class="produk-card tool">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee pot 4.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Stainless Steel Coffee Pot</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 338K</div>
+                </div>
+            </div>
+            <div class="produk-card tool">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee machine.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Coffee Maker</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 295K</div>
+                </div>
+            </div>
+            <div class="produk-card tool">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee pot 5.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Glass Coffee Pot</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 364K</div>
+                </div>
+            </div>
+            <div class="produk-card tool diskon">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/coffee pot 3.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Black Coffee Pot</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                    </div>
+                    <div class="price">IDR 174K <span>286K</span></div>
+                </div>
+            </div>
+            <div class="produk-card tool">
+                <div class="prod-icon">
+                    <a href="#" class="linku"><img src="img/cart.png" alt="" class="purchase"></a>
+                    <a href="#" class="view"><img src="img/Eye.png" alt="" class="view"></a>
+                </div>
+                <div class="product-img">
+                    <img src="img/products/Expreso machine 1.jpg" alt="">
+                </div>
+                <div class="product-des">
+                    <h3>Expreso Machine</h3>
+                    <div class="ratting">
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star" class="rate"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="price">IDR 1.845K</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="media">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="youtube"></i></a>
+        </div>
+        <div class="link">
+            <a href="index.html">Back to Home</a>
+        </div>
+        <div class="copy">
+            <p>Created by <a href="#">xavproduction.</a>| &copy; 2024</p>
+        </div>
+    </footer>
+    
+    <!-- Modal Box -->
+    <div class="modal" id="item-detail">
+        <div class="modal-con">
+            <a href="#" class="close"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="img/products/coffee bean.jpg" alt="Arabica Beans" class="imginmodal">
+                <div class="product-content">
+                    <h3>Coffee Beans Arabica 100%</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum inventore accusamus omnis similique suscipit molestiae voluptas maxime aliquam cumque explicabo, eaque harum fugit, nihil nesciunt vitae ex quas eius sed assumenda voluptates! Blanditiis, ab ad? Aspernatur voluptatum illo, nihil suscipit expedita quasi magnam necessitatibus quibusdam nostrum ipsam at facere neque?</p>
+                    <div class="right">
+                        <div>
+                            <div class="ratting">
+                                <i data-feather="star" class="rate"></i>
+                                <i data-feather="star" class="rate"></i>
+                                <i data-feather="star" class="rate"></i>
+                                <i data-feather="star" class="rate"></i>
+                                <i data-feather="star" class="rate"></i>
+                            </div>
+                            <div class="price">IDR 50K <span>IDR 72K</span></div>
+                            <a href="#"><i data-feather="shopping-cart"></i> <span>Add to Cart</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>    
+<script>
+    feather.replace();
+  </script>
+ <script  src="java/shop.js"></script>
+</html>

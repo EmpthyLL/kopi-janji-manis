@@ -42,6 +42,7 @@ body{
 html{
     scroll-behavior: smooth;
 }
+/* Navbar */
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -55,7 +56,17 @@ html{
     right: 0;
     z-index: 2;
 }
-.navbar .logo{
+.navshop .filter{
+    display: inline-block;
+}
+.navbar h1{
+    z-index: 3;
+}
+.navbar .toptittle{
+    position: absolute;
+    text-align: center;
+}
+.navbar .logo,.navinshop .logo{
     font-family: Kaushan;
     font-size: 2.2rem;
     color: white;
@@ -65,25 +76,94 @@ html{
 .navbar .logo span{
     color: var(--primary);
 }
-.navigasi a{
+.navigasi a,.navshop a{
     margin: 0 1.4rem;
     color: white;
     display: inline-block;
     font-size: 1.05rem;
 }
-.navigasi a:hover{
+.navigasi a:hover,.navshop a:hover{
     color: var(--primary);
 }
-.navigasi a:hover::after{
+.navigasi a:hover::after,.navshop a:hover::after{
     transform: scaleX(0.5);
 }
-.navigasi a::after{
+.navigasi a::after,.navshop a::after{
     display: block;
     content: '';
     padding-bottom: 0.5rem;
     border-bottom: 0.1rem solid var(--primary);
     transform: scaleX(0);
     transition: 0.5s;
+}
+.navshop a.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+/* Shoping Cart */
+.shoping-cart{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: auto;
+    width: 35rem;
+    height: 100vh;
+    overflow: scroll;
+    padding: 0 1.5rem;
+    color: black;
+    background-color: white;
+    transition: 0.5s;
+    padding-bottom: 2.5rem;
+}
+.shoping-cart.appear{
+    right: 0;
+}
+.shoping-cart img{
+    height: 6rem;
+    border-radius: 50%;
+}
+.shoping-cart h3{
+    font-size: 1.6rem;
+    width: 95%;
+}
+.shoping-cart h2{
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+.shoping-cart .item-price{
+    font-size: 1.2rem;
+}
+.shoping-cart .item-price span{
+    font-size: 0.8rem;
+    text-decoration: line-through;
+}
+.shoping-cart .remove-item{
+    position: absolute;
+    right: 0;
+    height: 2rem;
+    border-radius: 50%;
+}
+.shoping-cart .remove-item:hover{
+    background-color: rgb(231, 231, 231);
+}
+.cart-item{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #666;
+    position: relative;
+}
+.filter a.filterkan{
+    color: var(--primary);
+}
+.return{
+    display: inline-block;
+    position: relative;
+    top: 0.5rem;
 }
 .beli a{
     color: white;
@@ -96,6 +176,41 @@ html{
 #sidemenu{
     display: none;
 }
+#shopmenu{
+    display: none;
+}
+.search-bar{
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: white;
+    width: 50rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.2s;
+}
+.search-bar.active{
+    transform: scaleY(1);
+}
+.search-bar input#search-form{
+    height: 100%;
+    width: 100%;
+    font-size: 1.4rem;
+    color: var(--bg);
+    padding: 1rem;
+}
+.search-bar input#search-form::placeholder{
+    color: rgb(176, 176, 176);
+}
+.search-bar label{
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+}
 .hero{
     min-height: 100vh;
     display: flex;
@@ -105,8 +220,9 @@ html{
     position: relative;
     background-position: center;
     background-image: url(../img/Coffee\ BG.jpeg);
+    mask-image: linear-gradient(rgba(0,0,0,1) 84%,rgba(0,0,0,0));
 }
-.hero::after{
+/* .hero::after{
     content: '';
     display: block;
     position: absolute;
@@ -114,7 +230,7 @@ html{
     height: 30%;
     bottom: 0;
     background-image: linear-gradient(0deg,rgba(1,1,1,1) 8%,rgba(255, 255, 255, 0) 50%);
-}
+} */
 .hero main{
     padding: 1.4rem 7%;
 }
@@ -154,15 +270,21 @@ html{
 .hero main a.cta:hover{
     background-image: linear-gradient(#cf9b68,#a47a4f);
 }
-.about, .menu, .contact{
+.about, .menu, .products, .contact{
     padding: 10rem 7% 1.4rem;
 }
-.about h2, .menu h2, .contact h2{
+.shop{
+    padding: 7rem 7% 1.4rem;
+}
+.about h2, .menu h2, .products h2, .contact h2{
     text-align: center;
     font-size: 2rem;
     margin-bottom: 3rem;
 }
-.about h2 span, .menu h2 span, .contact h2 span{
+.shop h1{
+    font-size: 2.5rem;
+}
+.about h2 span, .menu h2 span, .products h2 span, .contact h2 span, .shop h1 span{
     color: var(--primary);
 }
 .row{
@@ -188,16 +310,23 @@ html{
     text-align: justify;
     line-height: 1.6rem;
 }
-.menu h2, .contact h2{
+.menu h2, .contact h2, .products h2, .shop h1{
     margin-bottom: 1rem;
 }
-.menu p, .contact p{
+.menu p, .contact p, .products p{
     text-align: center;
     max-width: 40rem;
     margin: auto;
     font-weight: 200;
     line-height: 1.6;
     font-size: 1.3rem;
+    margin-bottom: -3rem;
+}
+.shop p{
+    max-width: 70rem;
+    font-weight: 200;
+    line-height: 1.6;
+    font-size: 1.5rem;
     margin-bottom: -3rem;
 }
 .contact p{
@@ -210,8 +339,8 @@ html{
     margin-bottom: -3rem;
 }
 .menu .row{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(25rem,1fr));
     margin-top: 5rem;
     justify-content: center;
 }
@@ -232,9 +361,101 @@ html{
 .menu .menulist p{
     font-size: 1.5rem;
 }
+/* produk */
+.products .rows{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(20rem,1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+.shop .rows{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(30rem,1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+.products .produk-card,.shop .produk-card{
+    text-align: center;
+    border: 1px solid #666;
+    padding: 2rem;
+}
+.products .prod-icon,.shop .prod-icon{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.products .prod-icon a,.shop .prod-icon a{
+    width: 5rem;
+    height: 5rem;
+    color: white;
+    margin: 0.3rem;
+    border: 1px solid #666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products .prod-icon a img,.shop .prod-icon a img{
+    width: 2rem;
+}
+.shop .prod-icon div:hover{
+    background-color: var(--primary);
+}
+.shop .prod-icon img.purchase{
+    height:  2rem;
+}
+.products .prod-icon a:hover,.shop .prod-icon a:hover{
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+}
+.products .product-img img,.shop .product-img img{
+    height: 15rem;
+}
+.products .product-des, .shop .product-des{
+    font-size: 2rem;
+}
+.products .ratting, .shop .ratting{
+    font-size: 1.7rem;
+    padding: 0.8rem;
+    color: var(--primary);
+}
+.products .ratting .rate, .shop .ratting .rate{
+    fill: var(--primary);
+}
+.products .price, .shop .price{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.products .price span, .shop .price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+.products .seemore,.menu .seemore,.contact .seemore{
+    font-size: 1.6rem;
+    display: flex;
+    position: relative;
+    right: 0;
+    justify-content: end;
+    margin-top: 1.6rem;
+}
+.contact .seemore{
+    margin-top: 4rem;
+}
+.products .seemore a,.menu .seemore a,.contact .seemore a{
+    color: var(--primary);
+}
+.products .seemore a,.menu .seemore a,.contact .seemore a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* produk */
 .contact .docu{
     display: flex;
     text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .contact .docu img{
     width: 70%;
@@ -303,6 +524,9 @@ footer{
     margin-top: 3rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    position: absolute;
+    right: 0;
+    left: 0;
 }
 footer .media{
     padding: 1rem;
@@ -329,14 +553,203 @@ footer .copy{
 footer .copy a{
     color: #504131;
 }
-
-/* Media Queries */
-@media(max-width:1366px){
-    html{
-        font-size: 75%;
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: animModal 0.2s forwards;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/* Animation */
+@keyframes animModal {
+    0%{
+        top: -300pc;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
     }
 }
-@media(max-width:758px){
+
+.modal-con{
+    position: relative;
+    background-color: #fefefe;
+    color: var(--bg);
+    margin: auto;
+    padding: 1.2rem;
+    border: 1px solid #666;
+    width: 80%;
+    height: 35rem;
+}
+.modal-con .close{
+    position: absolute;
+    right: 1rem;
+}
+.modal-con .close:hover{
+    color: var(--primary);
+}
+.modal-content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.modal-content img{
+    height: 25rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+.modal-content h3{
+    font-size: 2.5rem;
+}
+.modal-content p{
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin-top: 1.2rem;
+    display: inline-block;
+    max-width: 95%;
+}
+.modal-content a{
+    display: flex;
+    gap: 1rem;
+    width: 12rem;
+    background-color: var(--primary);
+    color: white;
+    margin-top: 1rem;
+    padding: 1rem 1.6rem;
+    align-items: center;
+}
+.modal-content .right{
+    margin-top: 2rem;
+    position: relative;
+    right: 0;
+}
+.modal-content .right .ratting{
+    font-size: 2rem;
+}
+.modal-content .right .ratting .rate{
+    fill: black;
+}
+.modal-content .right .price{
+    font-size: 1.5rem;
+}
+.modal-content .right a{
+    font-size: 1..09rem;
+}
+.modal-content .right .price span{
+    font-size: 1.1rem;
+    text-decoration: line-through;
+}
+
+/* Media Queries */
+@media(max-width:1590px){
+    .menu .row{
+        grid-template-columns: repeat(2,minmax(25rem,1fr));
+    }
+    .products .rows{
+        grid-template-columns: repeat(2,minmax(20rem,1fr));
+    }
+}
+@media(max-width:1450px){
+    .shop .rows{
+        display: grid;
+        grid-template-columns: repeat(3,minmax(20rem,1fr));
+    }
+    .modal-con{
+        height: 36rem;
+    }
+}
+@media(max-width:1370px){
+    html{
+        font-size: 75%;
+    }    
+    .shop .rows{
+        display: grid;
+        grid-template-columns: repeat(3,minmax(20rem,1fr));
+    }
+}
+
+@media(max-width: 1178px) {
+    .products .rows{
+        grid-template-columns: repeat(2,minmax(20rem,1fr));
+    }
+    .shop .rows{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    }
+    .contact .docu{
+        flex-wrap: wrap;
+    }
+    .modal-con{
+        height: 62rem;
+    }
+    .modal-content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .modal-content .right{
+        margin-top: 2rem;
+        position: relative;
+        right: 0;
+    }
+    
+    #shopmenu{
+        display: inline-block;
+    }
+    .navshop{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 30rem;
+        height: 100vh;
+        background-color: white;
+        transition: 0.5s;
+    }
+    .filter{
+        border-top: 1px solid #504131;
+        width: 100%;
+    }
+    .active{
+        right: 0;
+    }
+    .navshop a{
+        color: black;
+        display: block;
+        margin: 2rem;
+        padding: 0.2rem;
+        font-size: 2rem;
+    }
+    .navshop a::after{
+        transform-origin: 0 0;
+    }
+    .navshop a:hover::after{
+        transform: scaleX(0.2);
+    }
+    .navshop a.back{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.4rem;
+    }
+    .return{
+        display: inline-block;
+        position: relative;
+        top: 0rem;
+    }
+    .products .prod-icon a,.shop .prod-icon a{
+        width: 6rem;
+        height: 6rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media(max-width:795px){
     html{
         font-size: 62.5%;
     }
@@ -368,6 +781,10 @@ footer .copy a{
     .navigasi a:hover::after{
         transform: scaleX(0.2);
     }
+    .search-bar{
+        width: 90%;
+        right: 2.3rem;
+    }
     .about .row{
         flex-wrap: wrap;
     }
@@ -382,9 +799,6 @@ footer .copy a{
     .about .row .kami h3{
         font-size: 1.6rem;
     }
-    .contact .docu{
-        flex-wrap: wrap;
-    }
     .contact .row{
         flex-wrap: wrap;
     }
@@ -393,6 +807,38 @@ footer .copy a{
     }
     .contact iframe{
         height: 30rem;
+    }
+    .shop .rows{
+        display: grid;
+        grid-template-columns: repeat(1,minmax(20rem,1fr));
+    }
+    .menu .row{
+        grid-template-columns: repeat(1,minmax(25rem,1fr));
+    }
+    .products .rows{
+        grid-template-columns: repeat(1,minmax(20rem,1fr));
+    }
+    .modal-con{
+        height: 72rem;
+    }
+    .modal-content .right a{
+        width: 13rem;
+        align-items: center;
+    }
+    .products .prod-icon a,.shop .prod-icon a{
+        width: 7rem;
+        height: 7rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media(max-width:500px){
+    .shop .rows{
+        display: grid;
+        grid-template-columns: repeat(1,minmax(20rem,1fr));
+    }
+    .modal-con{
+        height: 74rem;
     }
 }
 @media(max-width:450px){
