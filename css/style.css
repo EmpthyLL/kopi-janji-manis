@@ -319,22 +319,44 @@ html{
 .shop{
     padding: 7rem 7% 1.4rem;
 }
-.shop h2{
+.instuksi div{
+    width: 90%;
+}
+.instuksi h2{
+    font-family: Kaushan;
     text-align: center;
-    display: flex;
     font-size: 1.8rem;
-    justify-content: center;
-    align-items: center;
+    text-shadow: 1px 1px 8px rgba(119, 119, 119, 0.562),-1px -1px 8px rgba(119, 119, 119, 0.562);
+    font-weight: 800;
 }
-.shop h2:nth-child(2){
-    text-align: justify;
-    display: flex;
-    font-size: 2.4rem;
-    justify-content: center;
-    align-items: center;
+.instuksi h2:nth-child(2){
+    text-align: center;
+    font-size: 3rem;
+    color: #9cd6ff;
 }
-.shop h2 span{
+.instuksi h2:nth-child(2) span{
+    color: #ff9c9c;
+}
+.instuksi h2:nth-child(2) span:last-child{
+    color: white;
+}
+.instuksi h2 span{
     margin: auto;
+    color: #ffc26d;
+    text-shadow: 2px 2px 8px rgba(44, 44, 44, 0.748),-2px -2px 8px rgba(50, 50, 50, 0.774);
+}
+.instuksi{
+    width: 100%;
+    min-height: 44vh;
+    padding-top: 7rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/Bg\ toko\ s.jpg);
+    mask-image: linear-gradient(rgba(0,0,0,1) 84%,rgba(0,0,0,0));
 }
 .about h2, .menu h2, .products h2, .contact h2{
     text-align: center;
@@ -430,7 +452,7 @@ html{
 }
 .shop .rows{
     display: grid;
-    grid-template-columns: repeat(4,minmax(30rem,1fr));
+    grid-template-columns: repeat(3,minmax(30rem,1fr));
     gap: 1.5rem;
     margin-top: 4rem;
 }
@@ -715,12 +737,22 @@ footer .copy a{
 }
 
 /* Media Queries */
+@media(max-width:1747px){
+    .shop .rows{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    }
+}
 @media(max-width:1590px){
     .menu .row{
         grid-template-columns: repeat(2,minmax(25rem,1fr));
     }
     .products .rows{
         grid-template-columns: repeat(2,minmax(20rem,1fr));
+    }
+    .shop .rows{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
     }
 }
 @media(max-width:1450px){
@@ -729,7 +761,7 @@ footer .copy a{
         grid-template-columns: repeat(3,minmax(20rem,1fr));
     }
     .modal-con{
-        height: 36rem;
+        height: 35rem;
     }
 }
 @media(max-width:1370px){
@@ -744,14 +776,13 @@ footer .copy a{
         padding-bottom: 7rem;
     }
 }
-
 @media(max-width: 1178px) {
     .products .rows{
         grid-template-columns: repeat(2,minmax(20rem,1fr));
     }
     .shop .rows{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+        grid-template-columns: repeat(2,minmax(20rem,1fr));
     }
     .contact .docu{
         flex-wrap: wrap;
@@ -821,6 +852,14 @@ footer .copy a{
     .shoping-cart{
         padding-bottom: 9.8rem;
     }
+    .instuksi{
+        min-height: 30vh;
+    }
+}
+@media(max-width:900px){
+    .instuksi{
+        min-height: 30vh;
+    }
 }
 @media(max-width:795px){
     html{
@@ -883,7 +922,7 @@ footer .copy a{
     }
     .shop .rows{
         display: grid;
-        grid-template-columns: repeat(1,minmax(20rem,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
     }
     .menu .row{
         grid-template-columns: repeat(1,minmax(25rem,1fr));
@@ -904,6 +943,24 @@ footer .copy a{
         justify-content: center;
         align-items: center;
     }
+    .instuksi{
+        min-height: 25vh;
+    }
+}
+@media(max-width:658px){
+    .instuksi{
+        min-height: 25vh;
+    }
+}
+@media(max-width:570px){
+    .instuksi{
+        min-height: 28vh;
+    }
+}
+@media(max-width:530px){
+    .instuksi{
+        min-height: 32vh;
+    }
 }
 @media(max-width:500px){
     .shop .rows{
@@ -913,9 +970,39 @@ footer .copy a{
     .modal-con{
         height: 74rem;
     }
+    .instuksi{
+        min-height: 32vh;
+    }
 }
-@media(max-width:450px){
+@media(max-width:480px){
     html{
         font-size: 55%;
+    }
+    .instuksi{
+        min-height: 28vh;
+    }
+}
+@media(max-width:430px){
+    html{
+        font-size: 55%;
+    }
+    .instuksi{
+        min-height: 28vh;
+    }
+}
+@media(max-width:417px){
+    html{
+        font-size: 55%;
+    }
+    .instuksi{
+        min-height: 28vh;
+    }
+}
+@media(max-width:346px){
+    html{
+        font-size: 55%;
+    }
+    .instuksi{
+        min-height: 32vh;
     }
 }
