@@ -22,7 +22,10 @@ document.addEventListener('click',function(ev){
 })
 document.addEventListener('click',function(ev){
     if(ev.target.classList.contains("remove-item")){
-        ev.target.parentElement.remove()
+        ev.target.parentElement.classList.add('removeit')
+        setTimeout(function(){
+            ev.target.parentElement.remove()
+        },1000)
     }
 })
 const linku = document.getElementsByClassName('linku')

@@ -73,6 +73,19 @@ html{
     font-weight: 300;
     text-shadow: 1px 1px 5px #906c49,-1px -1px 3px #906c49;
 }
+.navbar .logogallery{
+    font-family: Kaushan;
+    font-size: 2.2rem;
+    color: white;
+    font-weight: 300;
+    text-shadow: 1px 1px 5px #906c49,-1px -1px 3px #906c49;
+}
+.logogallery span:first-child{
+    color: rgb(99, 198, 237);
+}
+.logogallery span:last-child{
+    color: rgb(255, 143, 161);
+}
 .navbar .logo span{
     color: var(--primary);
 }
@@ -156,6 +169,36 @@ html{
     padding-bottom: 1rem;
     border-bottom: 1px dashed #666;
     position: relative;
+}
+.cart-item.removeit{
+    transform-origin: top;
+    animation: hapus 1s forwards;
+}
+@keyframes hapus {
+    0%{
+        opacity: 1;
+        transform: scaleY(1);
+        height: 6rem;
+        margin: 2rem 0;
+        padding-bottom: 1rem;
+        gap: 1.5rem;
+    }
+    30%{
+        opacity: 0;
+        transform: scaleY(1);
+        height: 6rem;
+        margin: 2rem 0;
+        padding-bottom: 1rem;
+        gap: 1.5rem;
+    }
+    100%{
+        opacity: 0;
+        transform: scaleY(0);
+        height: 0;
+        margin: 0;
+        padding-bottom: 0;
+        gap: 0;
+    }
 }
 .filter a.filterkan{
     color: var(--primary);
@@ -275,6 +318,11 @@ html{
 }
 .shop{
     padding: 7rem 7% 1.4rem;
+}
+.shop h2{
+    text-align: center;
+    width: 80%;
+    margin: auto;
 }
 .about h2, .menu h2, .products h2, .contact h2{
     text-align: center;
