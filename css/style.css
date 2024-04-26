@@ -183,7 +183,7 @@ html{
         padding-bottom: 1rem;
         gap: 1.5rem;
     }
-    30%{
+    50%{
         opacity: 0;
         transform: scaleY(1);
         height: 6rem;
