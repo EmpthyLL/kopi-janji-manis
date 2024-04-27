@@ -73,6 +73,30 @@ html{
     font-weight: 300;
     text-shadow: 1px 1px 5px #906c49,-1px -1px 3px #906c49;
 }
+.navbar .logogallery{
+    font-family: Kaushan;
+    font-size: 2.2rem;
+    color: white;
+    font-weight: 300;
+    text-shadow: 1px 1px 5px #906c49,-1px -1px 3px #906c49;
+}
+.beli a{
+    color: white;
+    margin: 0 0.5rem;
+}
+.beli a:hover{
+    color: var(--primary);
+    margin: 0 0.5rem;
+}
+.logogallery span:first-child{
+    color: rgb(99, 198, 237);
+}
+.logogallery span:last-child{
+    color: rgb(255, 143, 161);
+}
+.navbar .logo span{
+    color: var(--primary);
+}
 .navigasi a,.navshop a{
     margin: 0 1.4rem;
     color: white;
@@ -99,91 +123,6 @@ html{
     align-items: center;
     font-size: 1.4rem;
 }
-/* Shoping Cart */
-.shoping-cart{
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    height: auto;
-    width: 35rem;
-    height: 100vh;
-    overflow: scroll;
-    padding: 0 1.5rem;
-    color: black;
-    background-color: white;
-    transition: 0.5s;
-    padding-bottom: 2.5rem;
-}
-.shoping-cart.appear{
-    right: 0;
-}
-.shoping-cart img{
-    height: 6rem;
-    border-radius: 50%;
-}
-.shoping-cart h3{
-    font-size: 1.6rem;
-    width: 95%;
-}
-.shoping-cart h2{
-    font-size: 2.5rem;
-    margin: 2rem;
-}
-.shoping-cart .item-price{
-    font-size: 1.2rem;
-}
-.shoping-cart .item-price span{
-    font-size: 0.8rem;
-    text-decoration: line-through;
-}
-.shoping-cart .remove-item{
-    position: absolute;
-    right: 0;
-    height: 2rem;
-    border-radius: 50%;
-}
-.shoping-cart .remove-item:hover{
-    background-color: rgb(231, 231, 231);
-}
-.cart-item{
-    margin: 2rem 0;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dashed #666;
-    position: relative;
-}
-.cart-item.removeit{
-    transform-origin: top;
-    animation: hapus 1s forwards;
-}
-@keyframes hapus {
-    0%{
-        opacity: 1;
-        transform: scaleY(1);
-        height: 6rem;
-        margin: 2rem 0;
-        padding-bottom: 1rem;
-        gap: 1.5rem;
-    }
-    50%{
-        opacity: 0;
-        transform: scaleY(1);
-        height: 6rem;
-        margin: 2rem 0;
-        padding-bottom: 1rem;
-        gap: 1.5rem;
-    }
-    100%{
-        opacity: 0;
-        transform: scaleY(0);
-        height: 0;
-        margin: 0;
-        padding-bottom: 0;
-        gap: 0;
-    }
-}
 .filter a.filterkan{
     color: var(--primary);
 }
@@ -191,20 +130,6 @@ html{
     display: inline-block;
     position: relative;
     top: 0.5rem;
-}
-.beli a{
-    color: white;
-    margin: 0 0.5rem;
-}
-.beli a:hover{
-    color: var(--primary);
-    margin: 0 0.5rem;
-}
-#sidemenu{
-    display: none;
-}
-#shopmenu{
-    display: none;
 }
 .search-bar{
     position: absolute;
@@ -238,125 +163,10 @@ html{
     margin-right: 1.5rem;
     color: var(--bg);
 }
-.hero{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-position: center;
-    background-image: url(../img/Coffee\ BG.jpeg);
-    mask-image: linear-gradient(rgba(0,0,0,1) 84%,rgba(0,0,0,0));
+.memo{
+    background-image: url(../img/Memo.jpeg);
 }
-/* .hero::after{
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    bottom: 0;
-    background-image: linear-gradient(0deg,rgba(1,1,1,1) 8%,rgba(255, 255, 255, 0) 50%);
-} */
-.hero main{
-    padding: 1.4rem 7%;
-}
-.hero main h1{
-    max-width: 42%;
-    font-size: 3em;
-    line-height: 1.2em;
-    color: white;
-    text-shadow: 1px 1px 5px gray;
-}
-.hero main h1 .pait{
-    color: skyblue;
-}
-.hero main h1 .manis{
-    color: pink;
-}
-.hero main p{
-    font-size: 1.2rem;
-    margin-top: 1.4rem;
-    line-height: 1.4rem;
-    text-shadow: 1px 1px 5px lightgray;
-    text-align: justify;
-    max-width: 45%;
-    /* mix-blend-mode: difference; */
-    font-weight: 200;
-}
-.hero main a.cta{
-    font-size: 1.2rem;
-    margin-top: 1.4rem;
-    display: inline-block;
-    padding: 1rem 3rem;
-    color: white;
-    background-image: linear-gradient(#df9e5d,#d68e46);
-    border-radius: 0.5rem;
-    box-shadow: 1px 1px 8px black;
-}
-.hero main a.cta:hover{
-    background-image: linear-gradient(#cf9b68,#a47a4f);
-}
-.about, .menu, .products, .contact, .shop{
-    padding: 10rem 7% 1.4rem;
-}
-.instuksi div{
-    width: 90%;
-}
-.instuksi h2{
-    font-family: Kaushan;
-    text-align: center;
-    font-size: 2.5rem;
-    text-shadow: 1px 1px 8px rgba(195, 195, 195, 0.706),-1px -1px 8px rgba(192, 192, 192, 0.752);
-    font-weight: 600;
-    margin-top: -8rem;
-    min-width: 50rem;
-}
-.instuksi a{
-    display: block;
-    text-align: center;
-    font-size: 6rem;
-    color: #9cd6ffe1;
-    font-family: Alura;
-    font-weight: 600;
-    transition: 0.3s;
-}
-.instuksi a:hover{
-    transform: scale(1.1);
-    padding-bottom: 0.5rem;
-}
-.instuksi a:hover::after{
-    transform: scaleX(0.3);
-    margin-top: 0;
-}
-.instuksi a::after{
-    display: block;
-    content: '';
-    margin-top: -2rem;
-    border-bottom: 0.2rem solid white;
-    transform: scaleX(0);
-    transition: 0.5s;
-}
-.instuksi a span{
-    color: #ff9c9ce5;
-    font-family: Kaushan;
-    font-size: 4rem;
-    text-shadow: 1px 1px 8px rgba(201, 201, 201, 0.706),-1px -1px 8px rgba(196, 196, 196, 0.752);
-}
-.instuksi a span:last-child{
-    color: rgba(255, 255, 255, 0.779);
-}
-.instuksi h2 span{
-    margin: auto;
-    color: #ffc26ddd;
-    text-shadow: 2px 2px 8px rgba(128, 128, 128, 0.726),-2px -2px 8px rgba(141, 141, 141, 0.778);
-    font-family: Dancing;
-    font-size: 1.5em;
-}
-.instuksi{
-    background-image: url(../img/Bg\ toko\ s.jpg);
-}
-.instuksi{
+.memo{
     width: 100%;
     min-height: 100vh;
     padding-top: 7rem;
@@ -368,237 +178,6 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
     mask-image: linear-gradient(rgba(0,0,0,1) 84%,rgba(0,0,0,0));
-}
-.about h2, .menu h2, .products h2, .contact h2, .shop h2{
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-}
-.about h2 span, .menu h2 span, .products h2 span, .contact h2 span, .shop h2 span{
-    color: var(--primary);
-}
-.row{
-    display: flex;
-}
-.about .row .img{
-    flex: 1 1 45rem;
-}
-.about .row img{
-    width: 100%;
-}
-.about .row .kami{
-    flex: 1 1 35rem;
-    padding: 0 1rem;
-}
-.kami h3{
-    font-size: 1.8rem;
-    margin-bottom: 1.4rem;
-}
-.kami p{
-    margin-bottom: 0.8rem;
-    font-size: 1.45rem;
-    text-align: justify;
-    line-height: 1.6rem;
-}
-.menu h2, .contact h2, .products h2, .shop h2{
-    margin-bottom: 1rem;
-}
-.menu p, .contact p, .products p{
-    text-align: center;
-    max-width: 40rem;
-    margin: auto;
-    font-weight: 200;
-    line-height: 1.6;
-    font-size: 1.3rem;
-    margin-bottom: -3rem;
-}
-.contact p{
-    text-align: center;
-    max-width: 50rem;
-    margin: auto;
-    font-weight: 200;
-    line-height: 1.6;
-    font-size: 1.3rem;
-    margin-bottom: -3rem;
-}
-.menu .row{
-    display: grid;
-    grid-template-columns: repeat(4,minmax(25rem,1fr));
-    margin-top: 5rem;
-    justify-content: center;
-}
-.menu .menulist{
-    text-align: center;
-}
-.menu .menulist img{
-    border-radius: 50%;
-    width: 50%;
-}
-.menu .menulist{
-    margin: 0 0 3.5rem;
-}
-.menu .menulist h3{
-    margin-top: 1.3rem;
-    font-size: 2rem;
-}
-.menu .menulist p{
-    font-size: 1.5rem;
-}
-/* produk */
-.products .rows{
-    display: grid;
-    grid-template-columns: repeat(4,minmax(20rem,1fr));
-    gap: 1.5rem;
-    margin-top: 4rem;
-}
-.shop .rows{
-    display: grid;
-    grid-template-columns: repeat(3,minmax(30rem,1fr));
-    gap: 1.5rem;
-    margin-top: 4rem;
-}
-.products .produk-card,.shop .produk-card{
-    text-align: center;
-    border: 1px solid #666;
-    padding: 2rem;
-}
-.products .prod-icon,.shop .prod-icon{
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-}
-.products .prod-icon a,.shop .prod-icon a{
-    width: 5rem;
-    height: 5rem;
-    color: white;
-    margin: 0.3rem;
-    border: 1px solid #666;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.products .prod-icon a img,.shop .prod-icon a img{
-    width: 2rem;
-}
-.shop .prod-icon div:hover{
-    background-color: var(--primary);
-}
-.shop .prod-icon img.purchase{
-    height:  2rem;
-}
-.products .prod-icon a:hover,.shop .prod-icon a:hover{
-    border: 1px solid var(--primary);
-    background-color: var(--primary);
-}
-.products .product-img img,.shop .product-img img{
-    height: 15rem;
-}
-.products .product-des, .shop .product-des{
-    font-size: 2rem;
-}
-.products .ratting, .shop .ratting{
-    font-size: 1.7rem;
-    padding: 0.8rem;
-    color: var(--primary);
-}
-.products .ratting .rate, .shop .ratting .rate{
-    fill: var(--primary);
-}
-.products .price, .shop .price{
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-.products .price span, .shop .price span{
-    text-decoration: line-through;
-    font-weight: lighter;
-    font-size: 1.1rem;
-}
-.products .seemore,.menu .seemore,.contact .seemore{
-    font-size: 1.6rem;
-    display: flex;
-    position: relative;
-    right: 0;
-    justify-content: end;
-    margin-top: 1.6rem;
-}
-.contact .seemore{
-    margin-top: 4rem;
-}
-.products .seemore a,.menu .seemore a,.contact .seemore a{
-    color: var(--primary);
-}
-.products .seemore a,.menu .seemore a,.contact .seemore a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* produk */
-.contact .docu{
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.contact .docu img{
-    width: 70%;
-    margin-top: 4rem;
-    box-shadow: 0.5px 0.5px 10px -2px rgba(255, 255, 255, 0.504),-0.5px -0.5px 10px -2px rgba(255, 255, 255, 0.501);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-.contact h3{
-    text-align: center;
-    margin-top: 4rem;
-    font-size: 1.5rem;
-}
-.contact h3 span{
-    color: var(--primary);
-}
-.contact iframe{
-    margin-top: 1.4rem;
-    flex: 1 1 60rem;
-    height: 45rem;
-    width: 100%;
-    object-fit: cover;
-}
-.contact form{
-    flex: 1 1 30rem;
-    padding: 5rem 2rem;
-    margin-top: 1.4rem;
-    text-align: center;
-    background-color: rgb(46, 46, 46);
-}
-.contact form .input{
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    background-color: var(--bg);
-    border: 1px solid grey;
-    padding-left: 2rem;
-    height: 4rem;
-}
-.contact form .input input{
-    background-color: var(--bg);
-    margin-left: 2rem;
-    height: 3rem;
-    color: white;
-    font-size: 1.4rem;
-}
-.contact form button{
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.8rem 1.2rem;
-    font-size: 1.5rem;
-    color: white;    
-    background-image: linear-gradient(#df9e5d,#d68e46);
-    border-radius: 0.6rem;
-}.contact form button:hover{
-    background-image: linear-gradient(#cf9b68,#a47a4f);
-    cursor: pointer;
-}
-.contact form .input input::placeholder{
-    color: gray;
 }
 footer{
     background-color: var(--primary);
