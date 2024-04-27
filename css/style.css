@@ -355,7 +355,7 @@ html{
     padding-bottom: 0.5rem;
 }
 .instuksi a:hover::after{
-    transform: scaleX(0.5);
+    transform: scaleX(0.32);
     margin-top: 0;
 }
 .instuksi a::after{
