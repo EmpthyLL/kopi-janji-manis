@@ -313,11 +313,8 @@ html{
 .hero main a.cta:hover{
     background-image: linear-gradient(#cf9b68,#a47a4f);
 }
-.about, .menu, .products, .contact{
+.about, .menu, .products, .contact, .shop{
     padding: 10rem 7% 1.4rem;
-}
-.shop{
-    padding: 7rem 7% 1.4rem;
 }
 .instuksi div{
     width: 90%;
@@ -325,31 +322,50 @@ html{
 .instuksi h2{
     font-family: Kaushan;
     text-align: center;
-    font-size: 2em;
-    text-shadow: 1px 1px 8px rgba(119, 119, 119, 0.562),-1px -1px 8px rgba(119, 119, 119, 0.562);
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 8px rgba(162, 162, 162, 0.706),-1px -1px 8px rgba(145, 145, 145, 0.752);
     font-weight: 600;
 }
-.instuksi h2:first-child{
+.instuksi h2{
     margin-top: -8rem;
 }
-.instuksi h2:nth-child(2){
+.instuksi a{
+    display: block;
     text-align: center;
     font-size: 6rem;
-    color: #9cd6ff;
+    color: #9cd6ffe1;
     font-family: Alura;
+    font-weight: 600;
+    transition: 0.3s;
 }
-.instuksi h2:nth-child(2) span{
-    color: #ff9c9c;
+.instuksi a:hover{
+    transform: scale(1.1);
+    padding-bottom: 0.5rem;
+}
+.instuksi a:hover::after{
+    transform: scaleX(0.3);
+    margin-top: 0;
+}
+.instuksi a::after{
+    display: block;
+    content: '';
+    margin-top: -2rem;
+    border-bottom: 0.2rem solid white;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+.instuksi a span{
+    color: #ff9c9ce5;
     font-family: Kaushan;
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
-.instuksi h2:nth-child(2) span:last-child{
-    color: white;
+.instuksi a span:last-child{
+    color: rgba(255, 255, 255, 0.779);
 }
 .instuksi h2 span{
     margin: auto;
-    color: #ffc26d;
-    text-shadow: 2px 2px 8px rgba(44, 44, 44, 0.748),-2px -2px 8px rgba(50, 50, 50, 0.774);
+    color: #ffc26ddd;
+    text-shadow: 2px 2px 8px rgba(192, 192, 192, 0.726),-2px -2px 8px rgba(179, 179, 179, 0.778);
     font-family: Dancing;
     font-size: 1.5em;
 }
@@ -372,15 +388,12 @@ html{
     background-size: cover;
     mask-image: linear-gradient(rgba(0,0,0,1) 84%,rgba(0,0,0,0));
 }
-.about h2, .menu h2, .products h2, .contact h2{
+.about h2, .menu h2, .products h2, .contact h2, .shop h2{
     text-align: center;
     font-size: 2rem;
     margin-bottom: 3rem;
 }
-.shop h1{
-    font-size: 2.5rem;
-}
-.about h2 span, .menu h2 span, .products h2 span, .contact h2 span, .shop h1 span{
+.about h2 span, .menu h2 span, .products h2 span, .contact h2 span, .shop h2 span{
     color: var(--primary);
 }
 .row{
@@ -406,7 +419,7 @@ html{
     text-align: justify;
     line-height: 1.6rem;
 }
-.menu h2, .contact h2, .products h2, .shop h1{
+.menu h2, .contact h2, .products h2, .shop h2{
     margin-bottom: 1rem;
 }
 .menu p, .contact p, .products p{
@@ -416,13 +429,6 @@ html{
     font-weight: 200;
     line-height: 1.6;
     font-size: 1.3rem;
-    margin-bottom: -3rem;
-}
-.shop p{
-    max-width: 70rem;
-    font-weight: 200;
-    line-height: 1.6;
-    font-size: 1.5rem;
     margin-bottom: -3rem;
 }
 .contact p{
