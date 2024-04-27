@@ -952,14 +952,14 @@ footer .copy a{
         min-height: 28vh;
     }
 }
-@media(max-width:570px){
+@media(max-width:560px){
     .instuksi{
-        min-height: 30vh;
+        min-height: 32vh;
     }
 }
 @media(max-width:530px){
     .instuksi{
-        min-height: 32vh;
+        min-height: 34vh;
     }
 }
 @media(max-width:500px){
@@ -982,12 +982,12 @@ footer .copy a{
         min-height: 30vh;
     }
 }
-@media(max-width:430px){
+@media(max-width:450px){
     html{
         font-size: 55%;
     }
     .instuksi{
-        min-height: 29vh;
+        min-height: 30vh;
     }
 }
 @media(max-width:417px){
@@ -995,7 +995,15 @@ footer .copy a{
         font-size: 55%;
     }
     .instuksi{
-        min-height: 29vh;
+        min-height: 30vh;
+    }
+}
+@media(max-width:357px){
+    html{
+        font-size: 55%;
+    }
+    .instuksi{
+        min-height: 32vh;
     }
 }
 @media(max-width:346px){
@@ -1003,6 +1011,6 @@ footer .copy a{
         font-size: 55%;
     }
     .instuksi{
-        min-height: 35vh;
+        min-height: 32vh;
     }
 }
