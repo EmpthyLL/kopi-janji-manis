@@ -325,17 +325,23 @@ html{
 .instuksi h2{
     font-family: Kaushan;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2em;
     text-shadow: 1px 1px 8px rgba(119, 119, 119, 0.562),-1px -1px 8px rgba(119, 119, 119, 0.562);
-    font-weight: 800;
+    font-weight: 600;
+}
+.instuksi h2:first-child{
+    margin-top: -8rem;
 }
 .instuksi h2:nth-child(2){
     text-align: center;
-    font-size: 3rem;
+    font-size: 6rem;
     color: #9cd6ff;
+    font-family: Alura;
 }
 .instuksi h2:nth-child(2) span{
     color: #ff9c9c;
+    font-family: Kaushan;
+    font-size: 3.5rem;
 }
 .instuksi h2:nth-child(2) span:last-child{
     color: white;
@@ -344,18 +350,26 @@ html{
     margin: auto;
     color: #ffc26d;
     text-shadow: 2px 2px 8px rgba(44, 44, 44, 0.748),-2px -2px 8px rgba(50, 50, 50, 0.774);
+    font-family: Dancing;
+    font-size: 1.5em;
 }
 .instuksi{
+    background-image: url(../img/Bg\ toko\ s.jpg);
+}
+.memo{
+    background-image: url(../img/Memo.jpeg);
+}
+.instuksi, .memo{
     width: 100%;
-    min-height: 44vh;
+    min-height: 100vh;
     padding-top: 7rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: -8rem;
-    background-position: center;
+    background-position: right center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../img/Bg\ toko\ s.jpg);
     mask-image: linear-gradient(rgba(0,0,0,1) 84%,rgba(0,0,0,0));
 }
 .about h2, .menu h2, .products h2, .contact h2{
@@ -777,6 +791,9 @@ footer .copy a{
     }
 }
 @media(max-width: 1178px) {
+    html{
+        font-size: 70%;
+    }   
     .products .rows{
         grid-template-columns: repeat(2,minmax(20rem,1fr));
     }
@@ -852,13 +869,10 @@ footer .copy a{
     .shoping-cart{
         padding-bottom: 9.8rem;
     }
-    .instuksi{
-        min-height: 32vh;
-    }
 }
 @media(max-width:900px){
-    .instuksi{
-        min-height: 30h;
+    html{
+        font-size: 65%;
     }
 }
 @media(max-width:795px){
@@ -943,24 +957,6 @@ footer .copy a{
         justify-content: center;
         align-items: center;
     }
-    .instuksi{
-        min-height: 28vh;
-    }
-}
-@media(max-width:658px){
-    .instuksi{
-        min-height: 28vh;
-    }
-}
-@media(max-width:560px){
-    .instuksi{
-        min-height: 32vh;
-    }
-}
-@media(max-width:530px){
-    .instuksi{
-        min-height: 34vh;
-    }
 }
 @media(max-width:500px){
     .shop .rows{
@@ -970,47 +966,14 @@ footer .copy a{
     .modal-con{
         height: 74rem;
     }
-    .instuksi{
-        min-height: 33vh;
-    }
 }
 @media(max-width:478px){
     html{
         font-size: 55%;
     }
-    .instuksi{
-        min-height: 31vh;
-    }
 }
 @media(max-width:450px){
     html{
         font-size: 55%;
-    }
-    .instuksi{
-        min-height: 31vh;
-    }
-}
-@media(max-width:417px){
-    html{
-        font-size: 55%;
-    }
-    .instuksi{
-        min-height: 30vh;
-    }
-}
-@media(max-width:357px){
-    html{
-        font-size: 55%;
-    }
-    .instuksi{
-        min-height: 32vh;
-    }
-}
-@media(max-width:346px){
-    html{
-        font-size: 55%;
-    }
-    .instuksi{
-        min-height: 34vh;
     }
 }
