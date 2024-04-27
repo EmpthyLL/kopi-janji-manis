@@ -322,8 +322,8 @@ html{
 .instuksi h2{
     font-family: Kaushan;
     text-align: center;
-    font-size: 2.5rem;
-    text-shadow: 1px 1px 8px rgba(195, 195, 195, 0.706),-1px -1px 8px rgba(192, 192, 192, 0.752);
+    font-size: 2.4rem;
+    text-shadow: 1px 1px 8px rgba(116, 116, 116, 0.706),-1px -1px 8px rgba(107, 107, 107, 0.752);
     font-weight: 600;
     margin-top: -8rem;
 }
@@ -332,7 +332,7 @@ html{
     border-radius: 1.4rem;
     text-align: center;
     margin: auto;
-    text-shadow: 1px 1px 8px rgba(195, 195, 195, 0.706),-1px -1px 8px rgba(192, 192, 192, 0.752);
+    text-shadow: 1px 1px 8px rgba(118, 118, 118, 0.706),-1px -1px 8px rgba(124, 124, 124, 0.752);
     font-size: 6rem;
     color: #9cd6ffe1;
     font-family: Alura;
@@ -370,14 +370,14 @@ html{
     color: #ff9c9ce5;
     font-family: Kaushan;
     font-size: 4rem;
-    text-shadow: 1px 1px 8px rgba(201, 201, 201, 0.706),-1px -1px 8px rgba(196, 196, 196, 0.752);
+    text-shadow: 1px 1px 8px rgba(138, 138, 138, 0.812),-1px -1px 8px rgba(132, 132, 132, 0.832);
 }
 .instuksi a span:last-child{
     color: rgba(255, 255, 255, 0.779);
 }
 .instuksi h2 span{
     margin: auto;
-    color: #ffc26ddd;
+    color: rgba(255, 231, 76, 0.867);
     text-shadow: 2px 2px 8px rgba(128, 128, 128, 0.726),-2px -2px 8px rgba(141, 141, 141, 0.778);
     font-family: Dancing;
     font-size: 1.5em;
