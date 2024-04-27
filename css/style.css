@@ -344,6 +344,7 @@ html{
     height: 6rem;
     filter: drop-shadow(2px 2px 5px lightgray);
     position: absolute;
+    z-index: 1;
 }
 .instuksi a span:first-child{
     position: relative;
