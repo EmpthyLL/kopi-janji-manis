@@ -326,7 +326,6 @@ html{
     text-shadow: 1px 1px 8px rgba(195, 195, 195, 0.706),-1px -1px 8px rgba(192, 192, 192, 0.752);
     font-weight: 600;
     margin-top: -8rem;
-    min-width: 50rem;
 }
 .instuksi a{
     display: block;
@@ -355,7 +354,7 @@ html{
     padding-bottom: 0.5rem;
 }
 .instuksi a:hover::after{
-    transform: scaleX(0.32);
+    transform: scaleX(0.35);
     margin-top: 0;
 }
 .instuksi a::after{
@@ -985,15 +984,5 @@ footer .copy a{
     }
     .modal-con{
         height: 74rem;
-    }
-}
-@media(max-width:478px){
-    html{
-        font-size: 52%;
-    }
-}
-@media(max-width:450px){
-    html{
-        font-size: 44%;
     }
 }
