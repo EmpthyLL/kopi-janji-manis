@@ -314,7 +314,6 @@ html{
 }
 .instuksi a{
     display: block;
-    width: 45%;
     position: relative;
     border-radius: 1.4rem;
     text-align: center;
@@ -330,7 +329,7 @@ html{
     position: absolute;
     width: 6rem;
     top: 3rem;
-    left: 30rem;
+    left: 56rem;
     filter: drop-shadow(2px 2px 5px lightgray);
 }
 .instuksi a:hover{
