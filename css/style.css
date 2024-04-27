@@ -59,6 +59,22 @@ html{
 .navshop .filter{
     display: inline-block;
 }
+.navbar .logo span{
+    color: var(--primary);
+}
+.navigasi a,.navshop a{
+    margin: 0 1.4rem;
+    color: white;
+    display: inline-block;
+    font-size: 1.05rem;
+}
+.navbar .logo,.navinshop .logo{
+    font-family: Kaushan;
+    font-size: 2.2rem;
+    color: white;
+    font-weight: 300;
+    text-shadow: 1px 1px 5px #906c49,-1px -1px 3px #906c49;
+}
 .navbar h1{
     z-index: 3;
 }
@@ -314,7 +330,6 @@ html{
 }
 .instuksi a{
     display: block;
-    position: relative;
     border-radius: 1.4rem;
     text-align: center;
     margin: auto;
@@ -326,11 +341,13 @@ html{
     transition: 0.3s;
 }
 .instuksi a img{
-    position: absolute;
-    width: 6rem;
-    top: 3rem;
-    left: 56rem;
+    height: 6rem;
     filter: drop-shadow(2px 2px 5px lightgray);
+    position: absolute;
+}
+.instuksi a span:first-child{
+    position: relative;
+    top: 3rem;
 }
 .instuksi a:hover{
     transform: scale(1.1);
