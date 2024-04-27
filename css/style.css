@@ -971,15 +971,15 @@ footer .copy a{
         height: 74rem;
     }
     .instuksi{
-        min-height: 32vh;
+        min-height: 33vh;
     }
 }
-@media(max-width:480px){
+@media(max-width:478px){
     html{
         font-size: 55%;
     }
     .instuksi{
-        min-height: 30vh;
+        min-height: 31vh;
     }
 }
 @media(max-width:450px){
@@ -987,7 +987,7 @@ footer .copy a{
         font-size: 55%;
     }
     .instuksi{
-        min-height: 30vh;
+        min-height: 31vh;
     }
 }
 @media(max-width:417px){
@@ -1011,6 +1011,6 @@ footer .copy a{
         font-size: 55%;
     }
     .instuksi{
-        min-height: 32vh;
+        min-height: 34vh;
     }
 }
