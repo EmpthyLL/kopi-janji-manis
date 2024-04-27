@@ -314,19 +314,31 @@ html{
 }
 .instuksi a{
     display: block;
+    width: 45%;
+    position: relative;
+    border-radius: 1.4rem;
     text-align: center;
+    margin: auto;
+    text-shadow: 1px 1px 8px rgba(195, 195, 195, 0.706),-1px -1px 8px rgba(192, 192, 192, 0.752);
     font-size: 6rem;
     color: #9cd6ffe1;
     font-family: Alura;
     font-weight: 600;
     transition: 0.3s;
 }
+.instuksi a img{
+    position: absolute;
+    width: 6rem;
+    top: 3rem;
+    left: 30rem;
+    filter: drop-shadow(2px 2px 5px lightgray);
+}
 .instuksi a:hover{
     transform: scale(1.1);
     padding-bottom: 0.5rem;
 }
 .instuksi a:hover::after{
-    transform: scaleX(0.3);
+    transform: scaleX(0.5);
     margin-top: 0;
 }
 .instuksi a::after{
@@ -334,6 +346,7 @@ html{
     content: '';
     margin-top: -2rem;
     border-bottom: 0.2rem solid white;
+    filter: drop-shadow(2px 2px 5px lightgray);
     transform: scaleX(0);
     transition: 0.5s;
 }
