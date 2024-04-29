@@ -212,6 +212,9 @@ html{
     color: white;
     margin: 0 0.5rem;
 }
+.beli a img{
+    height: 2.3rem;
+}
 .beli a:hover{
     color: var(--primary);
     margin: 0 0.5rem;
@@ -313,9 +316,6 @@ html{
 .hero main a.cta:hover{
     background-image: linear-gradient(#cf9b68,#a47a4f);
 }
-.about, .menu, .products, .contact, .shop{
-    padding: 10rem 7% 1.4rem;
-}
 .instuksi div{
     width: 90%;
 }
@@ -393,14 +393,22 @@ html{
     justify-content: center;
     align-items: center;
     margin-bottom: -8rem;
-    background-position: right center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     mask-image: linear-gradient(rgba(0,0,0,1) 84%,rgba(0,0,0,0));
 }
-.about h2, .menu h2, .products h2, .contact h2, .shop h2{
+.about, .menu, .products, .contact, .shop{
+    padding: 10rem 7% 1.4rem;
+}
+.about h2, .menu h2, .products h2, .contact h2{
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 3rem;
+}
+.shop h2{
+    text-align: center;
+    font-size: 3rem;
     margin-bottom: 3rem;
 }
 .about h2 span, .menu h2 span, .products h2 span, .contact h2 span, .shop h2 span{
@@ -982,7 +990,12 @@ footer .copy a{
         display: grid;
         grid-template-columns: repeat(1,minmax(20rem,1fr));
     }
-    .modal-con{
-        height: 74rem;
+}
+@media(max-width:376px){
+    .instuksi a{
+        font-size: 5rem;
+    }
+    .instuksi a span{
+        font-size: 4rem;
     }
 }

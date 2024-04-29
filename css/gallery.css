@@ -113,6 +113,9 @@ html{
     align-items: center;
     font-size: 1.4rem;
 }
+#galmenu{
+    display: none;
+}
 .filter a.filterkan{
     color: var(--primary);
 }
@@ -154,20 +157,93 @@ html{
     color: var(--bg);
 }
 .memo{
-    background-image: url(../img/Memo.jpeg);
+    background-image: url(../img/Memo.jpg);
+}
+.memo h2{
+    font-size: 5rem;
+    font-family: Alura;
+    color: rgba(255, 255, 255, 0.871);
+}
+.memo h2 span:first-of-type{
+    font-size: 4.5rem;
+    font-family: Kaushan;
+    color: rgba(112, 238, 215, 0.818);
+    text-shadow: 2px 2px 8px rgba(208, 208, 208, 0.804),-2px -2px 8px rgba(195, 195, 195, 0.8595);
+}
+.memo h2 span:last-of-type{
+    font-size: 4.5rem;
+    font-family: Kaushan;
+    color: rgba(233, 162, 255, 0.83);
+    text-shadow: 2px 2px 8px rgba(208, 208, 208, 0.815),-2px -2px 8px rgba(195, 195, 195, 0.829);
+}
+.memo a{
+    font-size: 5.7rem;
+    font-family: Dancing;
+    color: rgba(255, 255, 255, 0.861);
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(208, 208, 208, 0.858),-2px -2px 8px rgba(195, 195, 195, 0.86595);
+}
+.memo a span{
+    font-family: Alura;
+    color: rgba(255, 231, 76, 0.787);;
+}
+.memo div{
+    text-shadow: 1px 1px 8px rgba(181, 181, 181, 0.664),-1px -1px 8px rgba(176, 176, 176, 0.677);
+    margin-top: -5rem;
+}
+.memo a:hover{
+    transform: scale(1.1);
+    padding-bottom: 0.5rem;
+}
+.memo a:hover::after{
+    transform: scaleX(0.5);
+    margin-top: 0;
+}
+.memo a::after{
+    display: block;
+    content: '';
+    margin-top: -2rem;
+    border-bottom: 0.2rem solid white;
+    filter: drop-shadow(2px 2px 5px lightgray);
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+.memo a img{
+    height: 6rem;
+    filter: drop-shadow(2px 2px 5px lightgray);
+    position: absolute;
+    z-index: 1;
+    margin-top: 2rem;
 }
 .memo{
     width: 100%;
     min-height: 100vh;
     padding-top: 7rem;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    margin-bottom: -8rem;
-    background-position: right center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     mask-image: linear-gradient(rgba(0,0,0,1) 84%,rgba(0,0,0,0));
+}
+.gallery{
+    padding: 10rem 7% 1.4rem;
+}
+.gallery h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+.gallery h2 span{
+    color: var(--primary);
+}
+.gallery h3{
+    font-size: 2rem;
+}
+.gallery .rows{
+    display: grid;
 }
 footer{
     background-color: var(--primary);
@@ -308,72 +384,24 @@ footer .copy a{
 
 /* Media Queries */
 @media(max-width:1747px){
-    .shop .rows{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
-    }
+    
 }
 @media(max-width:1590px){
-    .menu .row{
-        grid-template-columns: repeat(2,minmax(25rem,1fr));
-    }
-    .products .rows{
-        grid-template-columns: repeat(2,minmax(20rem,1fr));
-    }
-    .shop .rows{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
-    }
-}
+    
 @media(max-width:1450px){
-    .shop .rows{
-        display: grid;
-        grid-template-columns: repeat(3,minmax(20rem,1fr));
-    }
-    .modal-con{
-        height: 35rem;
-    }
+    
 }
 @media(max-width:1370px){
     html{
         font-size: 75%;
-    }    
-    .shop .rows{
-        display: grid;
-        grid-template-columns: repeat(3,minmax(20rem,1fr));
-    }
-    .shoping-cart{
-        padding-bottom: 7rem;
     }
 }
 @media(max-width: 1178px) {
     html{
         font-size: 70%;
-    }   
-    .products .rows{
-        grid-template-columns: repeat(2,minmax(20rem,1fr));
-    }
-    .shop .rows{
-        display: grid;
-        grid-template-columns: repeat(2,minmax(20rem,1fr));
-    }
-    .contact .docu{
-        flex-wrap: wrap;
-    }
-    .modal-con{
-        height: 62rem;
-    }
-    .modal-content{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .modal-content .right{
-        margin-top: 2rem;
-        position: relative;
-        right: 0;
     }
     
-    #shopmenu{
+    #galmenu{
         display: inline-block;
     }
     .navshop{
@@ -416,15 +444,6 @@ footer .copy a{
         position: relative;
         top: 0rem;
     }
-    .products .prod-icon a,.shop .prod-icon a{
-        width: 6rem;
-        height: 6rem;
-        justify-content: center;
-        align-items: center;
-    }
-    .shoping-cart{
-        padding-bottom: 9.8rem;
-    }
 }
 @media(max-width:900px){
     html{
@@ -435,104 +454,14 @@ footer .copy a{
     html{
         font-size: 60%;
     }
-    #sidemenu{
-        display: inline-block;
-    }
-    .navigasi{
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 30rem;
-        height: 100vh;
-        background-color: white;
-        transition: 0.5s;
-    }
-    .active{
-        right: 0;
-    }
-    .navigasi a{
-        color: black;
-        display: block;
-        margin: 2rem;
-        padding: 0.2rem;
-        font-size: 2rem;
-    }
-    .navigasi a::after{
-        transform-origin: 0 0;
-    }
-    .navigasi a:hover::after{
-        transform: scaleX(0.2);
-    }
-    .search-bar{
-        width: 90%;
-        right: 2.3rem;
-    }
-    .about .row{
-        flex-wrap: wrap;
-    }
-    .about .row img{
-        height: 24rem;
-        object-fit: cover;
-        object-position: center;
-    }
-    .about .row .kami{
-        padding: 0;
-    }
-    .about .row .kami h3{
-        font-size: 1.6rem;
-    }
-    .contact .row{
-        flex-wrap: wrap;
-    }
-    .contact .row form{
-        padding-top: 0;
-    }
-    .contact iframe{
-        height: 30rem;
-    }
-    .shop .rows{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
-    }
-    .menu .row{
-        grid-template-columns: repeat(1,minmax(25rem,1fr));
-    }
-    .products .rows{
-        grid-template-columns: repeat(1,minmax(20rem,1fr));
-    }
-    .modal-con{
-        height: 72rem;
-    }
-    .modal-content .right a{
-        width: 13rem;
-        align-items: center;
-    }
-    .products .prod-icon a,.shop .prod-icon a{
-        width: 7rem;
-        height: 7rem;
-        justify-content: center;
-        align-items: center;
-    }
 }
 @media(max-width:500px){
     html{
         font-size: 58%;
     }
-    .shop .rows{
-        display: grid;
-        grid-template-columns: repeat(1,minmax(20rem,1fr));
-    }
-    .modal-con{
-        height: 74rem;
-    }
 }
-@media(max-width:478px){
-    html{
-        font-size: 52%;
-    }
-}
-@media(max-width:450px){
-    html{
-        font-size: 44%;
+@media(max-width:376px){
+    .memo a{
+        font-size: 5rem;
     }
 }
