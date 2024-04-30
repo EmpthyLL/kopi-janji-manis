@@ -236,38 +236,75 @@ html{
     font-size: 3rem;
     margin-bottom: 3rem;
 }
-.img-card{
-    
-}
 .gallery h2 span{
     color: var(--primary);
 }
 .gallery .customer,.gallery .employees,.gallery .bands{
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-evenly;
+    margin-bottom: 5rem;
+    justify-content: center;
+    gap: 0.5rem;
 }
 .customer,.employees,.bands{
     margin: 0 0 2rem;
 }
-.gallery .conta{
-    background-color: gray;
-    z-index: 1;
-    transition: 0.5s;
-    width: 25rem;
-    height: 30.8rem;
-    position: relative;
+.img-card {
+  background-color: transparent;
+  width: 23rem;
+  height: 23rem;
+  bottom: 0;
+  perspective: 1000px;
+  margin: 0 2rem 2rem 0;
+  margin-bottom: 5rem;
 }
-.slide{
-    transform: translateX(25rem);
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.img-card.turn .inner {
+  transform: rotateY(180deg);
+}
+
+.frontside, .backside {
+  position: absolute;
+  width: 23rem;
+  height: 23rem;
+  bottom: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.frontside {
+  color: black;
+}
+
+.backside {
+  transform: rotateY(180deg);
+  position: relative;
+}
+.backside .quote{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    color: black;
+    font-size: 1.3rem;
+    font-family: "Leckerli One", cursive;
+    align-items: center;
+    padding: 0 0.2rem;
 }
 .gallery img{
-    width: 25rem;
+    width: 23rem;
     cursor: pointer;
-    z-index: 2;
 }
-.gallery .img-card:hover img{
+.gallery .img-card:hover{
     animation: polaroid 1s;
 }
 @keyframes polaroid {
@@ -286,7 +323,7 @@ html{
 }
 .gallery h3{
     font-family: Dancing;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -325,106 +362,6 @@ footer .copy{
 }
 footer .copy a{
     color: #504131;
-}
-.modal{
-    display: none;
-    position: fixed;
-    z-index: 4;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation: animModal 0.2s forwards;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-.modal .product-content p{
-    text-align: justify;
-}
-/* Animation */
-@keyframes animModal {
-    0%{
-        top: -300pc;
-        opacity: 0;
-    }
-    100%{
-        top: 0;
-        opacity: 1;
-    }
-}
-
-.modal-con{
-    position: relative;
-    background-color: #fefefe;
-    color: var(--bg);
-    margin: auto;
-    padding: 1.2rem;
-    border: 1px solid #666;
-    width: 80%;
-    height: 35rem;
-}
-.modal-con .close{
-    position: absolute;
-    right: 1rem;
-    color: gray;
-}
-.modal-con .close:hover{
-    color: var(--primary);
-}
-.modal-content{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-}
-.modal-content img{
-    height: 25rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-}
-.modal-content h3{
-    font-size: 2.5rem;
-}
-.modal-content p{
-    font-size: 1.6rem;
-    line-height: 1.8rem;
-    margin-top: 1.2rem;
-    display: inline-block;
-    max-width: 95%;
-}
-.modal-content a{
-    display: flex;
-    gap: 1rem;
-    width: 12rem;
-    background-color: var(--primary);
-    color: white;
-    margin-top: 1rem;
-    padding: 1rem 1.6rem;
-    align-items: center;
-}
-.modal-content .right{
-    margin-top: 2rem;
-    position: relative;
-    right: 0;
-}
-.modal-content .right .ratting{
-    font-size: 2rem;
-}
-.modal-content .right .ratting .rate{
-    fill: black;
-}
-.modal-content .right .price{
-    font-size: 1.5rem;
-}
-.modal-content .right a{
-    font-size: 1..09rem;
-}
-.modal-content .right .price span{
-    font-size: 1.1rem;
-    text-decoration: line-through;
-}
-.modal a.addtocart:hover{
-    background-color: #906c49;
 }
 
 /* Media Queries */

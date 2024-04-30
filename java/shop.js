@@ -104,26 +104,26 @@ const biji = document.getElementById('Coffee-bean')
 const snack = document.getElementById('Snacks')
 const tool = document.getElementById('Tools')
 all.addEventListener('click',function(ev){
+    ev.preventDefault()
     if(all.classList.contains('filterkan') == false){
         diskon.classList.remove('filterkan')
         biji.classList.remove('filterkan')
         snack.classList.remove('filterkan')
         tool.classList.remove('filterkan')
         all.classList.add('filterkan')
-        ev.preventDefault()
         prodcard.forEach(function(card){
             card.style.display = 'block'
         })
     }
 })
 diskon.addEventListener('click',function(ev){
+    ev.preventDefault()
     if(diskon.classList.contains('filterkan') == false){
         diskon.classList.add('filterkan')
         biji.classList.remove('filterkan')
         snack.classList.remove('filterkan')
         tool.classList.remove('filterkan')
         all.classList.remove('filterkan')
-        ev.preventDefault()
         prodcard.forEach(function(card){
             if(card.classList.contains('diskon')){
                 card.style.display = 'block'
@@ -135,13 +135,13 @@ diskon.addEventListener('click',function(ev){
     }
 })
 biji.addEventListener('click',function(ev){
+    ev.preventDefault()
     if(biji.classList.contains('filterkan') == false){
         diskon.classList.remove('filterkan')
         biji.classList.add('filterkan')
         snack.classList.remove('filterkan')
         tool.classList.remove('filterkan')
         all.classList.remove('filterkan')
-        ev.preventDefault()
         prodcard.forEach(function(card){
             if(card.classList.contains('coffee-bean')){
                 card.style.display = 'block'
@@ -153,13 +153,13 @@ biji.addEventListener('click',function(ev){
     }
 })
 snack.addEventListener('click',function(ev){
+    ev.preventDefault()
     if(snack.classList.contains('filterkan') == false){
         diskon.classList.remove('filterkan')
         biji.classList.remove('filterkan')
         snack.classList.add('filterkan')
         tool.classList.remove('filterkan')
         all.classList.remove('filterkan')
-        ev.preventDefault()
         prodcard.forEach(function(card){
             if(card.classList.contains('snack')){
                 card.style.display = 'block'
@@ -171,13 +171,13 @@ snack.addEventListener('click',function(ev){
     }
 })
 tool.addEventListener('click',function(ev){
+    ev.preventDefault()
     if(tool.classList.contains('filterkan') == false){
         diskon.classList.remove('filterkan')
         biji.classList.remove('filterkan')
         snack.classList.remove('filterkan')
         tool.classList.add('filterkan')
         all.classList.remove('filterkan')
-        ev.preventDefault()
         prodcard.forEach(function(card){
             if(card.classList.contains('tool')){
                 card.style.display = 'block'
