@@ -75,7 +75,7 @@ employee.forEach(foto => {
     div.appendChild(inner)
     conemp.appendChild(div)
 });
-const band = ["Atas Nama Senja","Laskar Purnama","Melati","Our Eureka","Suara Hujan","Suara Hujan","The Wanderer","Yang Tak Terdengar"]
+const band = ["Atas Nama Senja","Laskar Purnama","Melati","Our Eureka","Suara Hujan","The Wanderer","Yang Tak Terdengar"]
 const conban = document.querySelector('.bands')
 band.forEach(foto => {
     const div = document.createElement('div')
