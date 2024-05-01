@@ -31,9 +31,13 @@ customer.forEach(foto => {
     inner.classList.add('inner')
     const front = document.createElement('div')
     front.classList.add('frontside')
-    const img = document.createElement('img')
-    img.src = `img/gallery/Customer/${foto}.png`
-    front.appendChild(img)
+    const imgfront = document.createElement('img')
+    imgfront.src = `img/gallery/Customer/${foto}.png`
+    const clickme = document.createElement('div')
+    clickme.appendChild(document.createTextNode('*Click Me'))
+    clickme.classList.add('clickit')
+    front.appendChild(imgfront)
+    front.appendChild(clickme)
     inner.appendChild(front)
     const back = document.createElement('div')
     back.classList.add('backside')
@@ -60,7 +64,11 @@ employee.forEach(foto => {
     front.classList.add('frontside')
     const imgfront = document.createElement('img')
     imgfront.src = `img/gallery/Employees/${foto}.png`
+    const clickme = document.createElement('div')
+    clickme.appendChild(document.createTextNode('*Click Me'))
+    clickme.classList.add('clickit')
     front.appendChild(imgfront)
+    front.appendChild(clickme)
     inner.appendChild(front)
     const back = document.createElement('div')
     back.classList.add('backside')
@@ -84,9 +92,13 @@ band.forEach(foto => {
     inner.classList.add('inner')
     const front = document.createElement('div')
     front.classList.add('frontside')
-    const img = document.createElement('img')
-    img.src = `img/gallery/Band/${foto}.png`
-    front.appendChild(img)
+    const imgfront = document.createElement('img')
+    imgfront.src = `img/gallery/Band/${foto}.png`
+    const clickme = document.createElement('div')
+    clickme.appendChild(document.createTextNode('*Click Me'))
+    clickme.classList.add('clickit')
+    front.appendChild(imgfront)
+    front.appendChild(clickme)
     inner.appendChild(front)
     const back = document.createElement('div')
     back.classList.add('backside')
@@ -114,6 +126,7 @@ const small = document.getElementById('Small')
 const large = document.getElementById('Large')
 const extralarge = document.getElementById('XLarge')
 const quotes = document.querySelectorAll('.quote')
+const clickit = document.querySelectorAll('.clickit')
 small.addEventListener('click',function(ev){
     ev.preventDefault()
     if(small.classList.contains('filterkan') == false){
@@ -134,6 +147,11 @@ small.addEventListener('click',function(ev){
             quote.style.fontSize = '1.2rem'
             quote.style.left = '1rem'
             quote.style.bottom = '5.5rem'
+        })
+        clickit.forEach(function(click){
+            click.style.fontSize = '1rem'
+            click.style.left = '2rem'
+            click.style.top = '2.9rem'
         })
     }
 })
@@ -156,6 +174,11 @@ medium.addEventListener('click',function(ev){
             quote.style.fontSize = '1.3rem'
             quote.style.left = '0rem'
             quote.style.bottom = '3rem'
+        })
+        clickit.forEach(function(click){
+            click.style.fontSize = '1.3rem'
+            click.style.left = '1rem'
+            click.style.top = '3rem'
         })
     }
 })
@@ -180,6 +203,11 @@ large.addEventListener('click',function(ev){
             quote.style.left = '0rem'
             quote.style.bottom = '0rem'
         })
+        clickit.forEach(function(click){
+            click.style.fontSize = '1.4rem'
+            click.style.left = '1.2rem'
+            click.style.top = '3.2rem'
+        })
     }
 })
 extralarge.addEventListener('click',function(ev){
@@ -202,6 +230,11 @@ extralarge.addEventListener('click',function(ev){
             quote.style.fontSize = '1.55rem'
             quote.style.left = '0rem'
             quote.style.bottom = '-4rem'
+        })
+        clickit.forEach(function(click){
+            click.style.fontSize = '1.5rem'
+            click.style.left = '1.2rem'
+            click.style.top = '3.7rem'
         })
     }
 })
