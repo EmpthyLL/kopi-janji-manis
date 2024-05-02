@@ -701,7 +701,7 @@ footer .copy a{
     }
 }
 
-.modal-con{
+.modal-con, .shopmod-con{
     position: relative;
     background-color: #fefefe;
     color: var(--bg);
@@ -716,7 +716,15 @@ footer .copy a{
     right: 1rem;
     color: gray;
 }
+.shopmod-con .close{
+    position: absolute;
+    right: 1rem;
+    color: gray;
+}
 .modal-con .close:hover{
+    color: var(--primary);
+}
+.shopmod-con .close:hover{
     color: var(--primary);
 }
 .modal-content{
@@ -801,6 +809,9 @@ footer .copy a{
     .modal-con{
         height: 35rem;
     }
+    .shopmod-con{
+        height: 35rem;
+    }
 }
 @media(max-width:1370px){
     html{
@@ -829,6 +840,9 @@ footer .copy a{
         flex-wrap: wrap;
     }
     .modal-con{
+        height: 62rem;
+    }
+    .shopmod-con{
         height: 62rem;
     }
     .modal-content{
@@ -970,6 +984,12 @@ footer .copy a{
     }
     .modal-con{
         height: 72rem;
+    }
+    .modal-con{
+        height: 72rem;
+    }
+    .shopmod-con{
+        height: 75rem;
     }
     .modal-content .right a{
         width: 13rem;
